@@ -62,7 +62,7 @@ $RNG.Dispose()
 
 #NOTE: Put encrypted content into new file and delete original file
 $CipherText | Out-File "$file.enc"
-del "$file"
+del /q "$file"
 }
 
 }
