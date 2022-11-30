@@ -43,7 +43,7 @@ $files = Get-ChildItem -Path "$path\$library\*" -Force -Recurse -Exclude desktop
 Foreach ($file in $files){
 
 #NOTE: Get the file content
-$MySecretText         = Get-Content -Raw $file
+$MySecretText         = Get-Content -Raw "$file"
 
 #NOTE: Encrypt data with AES:
 $UnencryptedBytes     = [System.Text.Encoding]::UTF8.GetBytes($MySecretText)
